@@ -1,40 +1,147 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <head>
-      <title>Colin's Place</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <link rel="stylesheet" href="style/main.css"/>
-    </head>
+    <link rel="stylesheet" href="style/basic.css"/>
+    <link rel="stylesheet" href="style/mobile.css"/>
+    <link rel="stylesheet" href="style/shapes.css"/>
+
     <scripts>
       <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+      <!-- <script>window.DEV_MODE = true</script> -->
+      <script src="modules/ScrollToPage.js" type="text/javascript"></script>
+      <script src="modules/DownloadResume.js" type="text/javascript"></script>
+      <script src="modules/navbar.js" type="text/javascript"></script>
     </scripts>
 
+    <title>Colin's Place</title>
+    <meta name="description" content="Colin Porter's Resume Website">
+    <meta name="author" content="Colin Porter">
+  </head>
+  <body>
     <nav class="navbar-container">
-      <ul class="navbar-section">
-        <li class="scroll-to-link" id="home-section"   >Home</li>
-        <li class="scroll-to-link" id="about-section"  >About Me</li>
-        <li class="scroll-to-link" id="skills-section" >Skills</li>
-        <li class="scroll-to-link" id="contact-section">Contact Me</li>
+      <button class="navbar-mobile-button"></button>
+      <ul class="navbar-section" id="left-navbar-section">
+        <a class="scroll-to-link" targetID="intro-section"  >Home</a>
+        <a class="scroll-to-link" targetID="about-section"  >About Me</a>
+        <a class="scroll-to-link" targetID="resume-section" >Resume</a>
+        <a class="scroll-to-link" targetID="contact-section">Contact Me</a>
       </ul>
-
-      <ul class="navbar-section" id="right-navbar-section">
-        <li>
-          <a class="git-button"
+      <ul id="right-navbar-section">
+          <a class="github-icon"
             href="https://github.com/cporter1"
             target='_blank' 
-            rel="noreferrer">
+            rel="noreferrer">    
           </a>
-        </li>
-        <li>
-          <a class="linkedin-button"
+          <a class="linkedin-icon"
             href='https://linkedin.com/in/colin-porter-44a025174'
             target='_blank' 
             rel="noreferrer">
           </a>
-        </li>
       </ul>
     </nav>
 
+    <section id='intro-section' class="intro-container">
+      <div class="intro-title-container">
+        <h1>Welcome, my name is Colin Porter.<h1>
+      </div>
+      <div class="area" >
+        <ul class="circles">
+            <li class="shape-1"></li>
+            <li class="shape-2"></li>
+            <li class="shape-3"></li>
+            <li class="shape-4"></li>
+            <li class="shape-5"></li>
+            <li class="shape-6"></li>
+            <li class="shape-7"></li>
+            <li class="shape-8"></li>
+            <li class="shape-9"></li>
+            <li class="shape-10"></li>
+        </ul>
+    </div>
+    </section>
+
+    <section id='about-section' class="about-container">
+      <h2 class="about-title">ABOUT ME</h2>
+      <div class="about-grid-wrapper">
+        <div class='paragraph-wrapper'>
+            <p id='top'>
+              Hello, my name is Colin Porter and I am a full stack software engineer with a focus in frontend.
+            </p>
+            <p>I have 4+ years of experience building production web applications that puts the user 
+              experience at the forefront of development.
+            </p>
+            <p>I use a frontend first design methodology focusing the design on the user experience.</p>
+            <p>I am currently job hunting, send me a message if you think I&apos;d be a good fit on your company!</p>
+            <span><i>A little bit more...</i></span>
+            <p>I love playing board games with friends, going hiking & backpacking, and everything about soccer!</p>
+            <div class='icon-wrapper'>
+              <Image class='computer-icon' src='assets/computer.svg' alt=''/>
+              <Image class='compass-icon' src='assets/compass.svg' alt=''/>
+              <Image class='soccerball-icon' src='assets/soccer-ball.svg' alt=''/>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id='resume-section' class="resume-container">
+      <h2 class="resume-title">RESUME</h2>
+      <div class="resume-column-container">
+        <div class="column-wrapper">
+          <div class="resume-column">
+            <div class='resume-wrapper'>
+                <img class='resume' src='assets/resume.jpeg' alt=''/>
+            </div>
+          </div>
+          <div class="resume-column-2">
+            <button class="download-button"><i>Download</i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id='contact-section' class="contactme-container">
+      <h2>CONTACT ME</h2>
+      <div class="contactme-grid-wrapper">
+        <div class="info-container"> 
+          <div class="email-wrapper">
+            <h3>EMAIL</h3>
+            <text>colinarthurporter@gmail.com</text>
+          </div>
+        </div>
+        <form class="form-container" onSubmit={onSubmit}>
+          <div class="name-email-wrapper">
+            <input
+              id="name-input"
+              type='text'
+              name='sender_name'
+              placeholder='your name'
+              onChange={handleChange}
+            />
+            <input
+              id="email-input"
+              type='text'
+              name='sender_email'
+              placeholder='your email'
+              onChange={handleChange}
+            />
+          </div>
+          <textarea
+            id="message-textarea"
+            class="email-textarea"
+            type='text'
+            name='message'
+            placeholder='message'
+            ></textarea>
+          <div class="button-container">
+            <button class="contactme-submit-button">Submit</button>
+            <button class="contactme-cancel-button">Clear</button>
+          </div>
+        </form>
+      </div>
+    </section>
   </body>
 </html>
