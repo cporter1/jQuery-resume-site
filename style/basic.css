@@ -55,7 +55,6 @@ p, h1, h2, h3, h4, h5, h6 {
   --secondary-color:rgb(119, 119, 168);
   --secondary-highlight: #a3a3c4;
   --highlight-color: #34485E;
-
 }
 
 h2 {
@@ -194,8 +193,6 @@ h2 {
   margin: 0 5%;
 }
 
-.compass-icon {
-}
 
 .soccerball-icon {
   padding: 14px;
