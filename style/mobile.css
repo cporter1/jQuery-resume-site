@@ -39,3 +39,93 @@
     display: flex !important;
   }
 }
+
+/* About Me Page */
+
+@media screen and (max-width: 830px) {
+  .paragraph-wrapper > p{
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+}
+
+/* Resume Page */
+
+@media screen and (max-width: 675px) {
+  .column-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .download-button {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (min-width: 540px) and (max-width: 675px) {
+  .resume {
+    max-height: 64vh;
+  }
+}
+
+/* Contact me Page */
+
+@media screen and (max-width: 1020px) {
+
+  .contactme-container > h2 {
+    margin: 0 0 10px 0;
+  }
+
+  .form-container {
+    margin: 0;
+  }
+
+  .contactme-grid-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .email-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+
+  .email-wrapper > h3 {
+    margin-right: 20px;
+  }
+
+  .email-wrapper > text {
+    line-height: 50px;
+  }
+
+  .email-wrapper > h3 , .email-wrapper > text {
+    display: block;
+    text-align: center;
+  }
+
+  .name-email-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0;
+    outline-width: 0;
+
+  }
+
+  .name-email-wrapper > input {
+    width: 100%;
+  }
+
+  #email-input {
+    margin: 10px 0 0 0;
+  }
+
+  .email-textarea {
+    font-size: 1.5rem;
+  }
+
+}

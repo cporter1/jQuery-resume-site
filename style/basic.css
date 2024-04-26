@@ -195,7 +195,7 @@ h2 {
 
 
 .soccerball-icon {
-  padding: 14px;
+  padding: 1%;
 }
 
 .about-grid-wrapper {
@@ -297,7 +297,7 @@ h2 {
 
   display: flex;
   flex-direction: column;
-  padding: 8vh;
+  padding: 8vh 4vw;
 }
 
 .contactme-container > h2 {
@@ -369,7 +369,6 @@ h2 {
   height: 30vh;
   border-radius: 5px;
   border: none;
-  white-space: pre;
   resize: none;
   margin-bottom: 2vh;
   font-size: 1.5rem;
@@ -383,8 +382,11 @@ h2 {
 }
 
 .contactme-submit-button, .contactme-cancel-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 100px;
-  height: 30px;
+  height: 40px;
   border-radius: 5px;
   border: none;
   font-size: x-large;

@@ -14,7 +14,8 @@
       <!-- <script>window.DEV_MODE = true</script> -->
       <script src="modules/ScrollToPage.js" type="text/javascript"></script>
       <script src="modules/DownloadResume.js" type="text/javascript"></script>
-      <script src="modules/navbar.js" type="text/javascript"></script>
+      <script src="modules/Navbar.js" type="text/javascript"></script>
+      <script src="modules/SendEmail.js" type="text/javascript"></script>
     </scripts>
 
     <title>Colin's Place</title>
@@ -112,21 +113,19 @@
             <text>colinarthurporter@gmail.com</text>
           </div>
         </div>
-        <form class="form-container" onSubmit={onSubmit}>
+        <form class="form-container">
           <div class="name-email-wrapper">
             <input
               id="name-input"
               type='text'
               name='sender_name'
               placeholder='your name'
-              onChange={handleChange}
             />
             <input
               id="email-input"
               type='text'
               name='sender_email'
               placeholder='your email'
-              onChange={handleChange}
             />
           </div>
           <textarea
@@ -137,7 +136,7 @@
             placeholder='message'
             ></textarea>
           <div class="button-container">
-            <button class="contactme-submit-button">Submit</button>
+            <button type='button' class="contactme-submit-button">Submit</button>
             <button class="contactme-cancel-button">Clear</button>
           </div>
         </form>
